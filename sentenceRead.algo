@@ -2,8 +2,8 @@
 ALGORITHM sentence_read
 VAR
     sentenceLength,numWords,vowelCount: INTEGER;
-    sentenceArray1 : ARRAY_OF type[STRING];
-    sentenceArray2: ARRAY_OF type[STRING];
+    sentenceArray1 : ARRAY_OF STRING[text.length];
+    sentenceArray2: ARRAY_OF STRING[text.length];
 BEGIN
 FUNCTION sentenceRead(text) : object
 VAR

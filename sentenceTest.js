@@ -1,20 +1,31 @@
 function sentenceRead(text){
-    let result = {
-      sentenceLength: 0,
-      numWords: 0,
-      vowelCount: 0,
+    
+    let sentenceLength = 0
+    let numWords =  1
+    let vowelCount =  0
+
+    char = {
+      a: 'a',
+      e: 'e',
+      i: 'i',
+      o: 'o',
+      u: 'u'
     }
     
-    result.sentenceLength = text.length
-    
-    let sentenceArray1 = text.split(' ')
-    
-    result.numWords = sentenceArray1.length
-    
-    let sentenceArray2 = Array.from(text.toLowerCase())
-    
-    result.vowelCount = sentenceArray2.filter(letter => 'aeiou'.includes(letter)).length
-    return result
+    for (i = 0; i<text.length; i++){
+
+      sentenceLength = text.length
+
+      if (char[text[i].toLowerCase()]) {
+        vowelCount+=1
+      }
+
+      if (text[i] === ' '){
+        numWords+=1
+      }
+      
+    }
+    return {sentenceLength,numWords,vowelCount}
     
     }
     
